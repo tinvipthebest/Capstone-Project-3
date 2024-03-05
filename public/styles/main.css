@@ -1,0 +1,121 @@
+/* Reset default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Background gradient */
+body {
+    background: linear-gradient(to bottom right, #4CAF50, #2196F3);
+    min-height: 100vh;
+}
+
+/* Navigation bar styles */
+nav {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* Header styles */
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Footer styles */
+footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Main content container */
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* Sample article styles */
+.article {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.article h2 {
+    color: #333;
+}
+
+.article p {
+    color: #555;
+}
+
+/* Decorative elements */
+.decorative-line {
+    background-color: #fff;
+    height: 2px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* Styles for headings and lists */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h2 {
+    color: #007bff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav {
+        padding: 5px;
+    }
+
+    .container, .article, header, footer {
+        padding: 10px;
+        border-radius: 5px;
+    }
+}

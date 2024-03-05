@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+
+        .create {
+            text-align: center;
+            /* Align content in the center */
+            margin-bottom: 20px;
+            /* Add margin for spacing */
+        }
+
+        .create a {
+            text-decoration: none;
+            color: #007bff;
+            display: inline-block;
+            /* Center the link */
+            padding: 10px 20px;
+            /* Add some padding */
+            border-radius: 5px;
+            /* Add rounded corners */
+            background-color: #f0f0f0;
+            /* Light background color */
+            transition: background-color 0.3s ease;
+            /* Smooth transition */
+        }
+
+        .create a:hover {
+            background-color: #cfd8dc;
+            /* Darker background color on hover */
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        li {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            /* Adjust width as needed */
+            max-width: 600px;
+            /* Limit maximum width for better readability */
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #555;
+            text-align: center;
+        }
+
+        .actions {
+            text-align: center;
+            /* Align content in the center */
+        }
+
+        .actions a {
+            color: #007bff;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include("partials/nav.ejs") %>
+        <h1>Blog</h1>
+        <div class="create"><a href="/new">Create New Post</a></div>
+        <ul>
+            <% posts.forEach((post, index)=> { %>
+                <li>
+                    <h2>
+                        <%= post.title %>
+                    </h2>
+                    <p>
+                        <%= post.content %>
+                    </p>
+                    <div class="actions">
+                        <a href="/edit/<%= index %>">Edit</a> |
+                        <a href="/delete/<%= index %>">Delete</a>
+                    </div>
+                </li>
+                <% }); %>
+        </ul>
+        <%- include("partials/footer.ejs") %>
+</body>
+
+</html>
